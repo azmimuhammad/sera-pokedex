@@ -36,17 +36,17 @@ export const StyledCard = styled.div`
     font-weight: 500;
     font-size: 26px;
   }
+`
 
-  .card-type {
-    display: flex;
-    gap: 10px;
+export const PokemonType = styled.div`
+  display: flex;
+  gap: 10px;
 
-    .type {
-      color: #fff;
-      background: #fd7d24;
-      border-radius: 5px;
-      width: max-content;
-      padding: 3px 10px;
-    }
+  .type {
+    color: #fff;
+    background: #fd7d24;
+    border-radius: 5px;
+    width: max-content;
+    padding: 3px 10px;
   }
 `

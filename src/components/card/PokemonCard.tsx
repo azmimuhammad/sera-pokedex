@@ -1,23 +1,33 @@
 import {useNavigate} from "react-router-dom"
-import {StyledCard} from "./PokemonCardStyles"
+import {StyledCard, PokemonType} from "./PokemonCardStyles"
 
-const Card = () => {
+interface ItemProps {
+  id: number
+  name: string
+  image: string
+  types: any[]
+}
+
+const Card = (props: {item: ItemProps}) => {
   const navigate = useNavigate()
+  const {item} = props
+
   return (
-    <StyledCard onClick={() => navigate('/pokemon/1')}>
+    <StyledCard onClick={() => navigate(`/pokemon/${item.name}`)}>
       <div className="card-image-wrapper">
-        <img
-          src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
-          alt=""
-          className="card-image"
-        />
+        <img src={item.image} alt={item.name} className="card-image" />
       </div>
-      <div className="card-number">#0001</div>
-      <div className="card-title">Bulbasaur</div>
-      <div className="card-type">
-        <div className="type">Satu</div>
-        <div className="type">Satu</div>
-      </div>
+      <div className="card-number">{`#${("0000" + item.id).slice(-4)}`}</div>
+      <div className="card-title">{item.name}</div>
+      <PokemonType>
+        {item.types.map((val: any, key: number) => {
+          return (
+            <div className="type" key={key}>
+              {val.type.name}
+            </div>
+          )
+        })}
+      </PokemonType>
     </StyledCard>
   )
 }

@@ -6,7 +6,9 @@ export const PokedexListWrapper = styled.div`
   padding: 3% 5.5%;
 
   .filter {
-    padding: 0 1.5% 20px 1.6%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.6% 20px 1.6%;
 
     select {
       width: 300px;
