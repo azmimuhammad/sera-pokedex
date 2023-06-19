@@ -92,3 +92,14 @@ export interface BasicDetail {
   name: string
   url: string
 }
+
+export type ISimpleDetail = {
+  id: number
+  name: string
+  height: string
+  weight: string
+  ability: string
+  image: string
+  type: Type[]
+  stats: Stat[]
+}

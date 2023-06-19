@@ -13,6 +13,7 @@ export const DetailStyled = styled.div`
     font-weight: 500;
     font-size: 32px;
     margin-bottom: 30px;
+    text-transform: capitalize;
 
     .number {
       color: #c6c6c6;
@@ -78,7 +79,7 @@ export const PokemonStats = styled.div`
 
   .stat {
     display: grid;
-    grid-template-columns: 10% 20% auto;
+    grid-template-columns: 15% 20% auto;
 
     .progress {
       border: 1px solid #d8d6d6;
