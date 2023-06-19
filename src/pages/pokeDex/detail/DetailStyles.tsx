@@ -94,7 +94,8 @@ export const PokemonStats = styled.div`
 
 export const Progress = styled.div`
   height: 100%;
-  width: ${(props: {value: number}) => props.value || 0}%;
+  width: ${(props: { value: number }) => props.value || 0}%;
+  max-width: 100%;
   background: ${(props: {value: number}) =>
     props.value < 30 ? "#ef5350" : props.value >= 70 ? "#76ff03" : "#ffeb3b"};
 `
