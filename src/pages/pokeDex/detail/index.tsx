@@ -30,7 +30,7 @@ const PokeDetailPage: FC = () => {
 
   useEffect(() => {
     fetchData()
-  }, [id])
+  }, [id]) //eslint-disable-line
 
   const fetchData = async () => {
     setLoading(true)
